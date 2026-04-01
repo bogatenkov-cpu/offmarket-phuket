@@ -38,7 +38,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                 <div>
                   <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">{p.project_name}</h1>
-                  <p className="text-gray-500 mt-1">{p.district}, Phuket</p>
+                  <p className="text-gray-500 mt-1">{p.district_en}, Phuket</p>
                   <div className="flex items-center gap-2 mt-2">
                     <span className="text-amber-500">{ratingStars}</span>
                     <span className="text-sm text-gray-400">{p.rating}/5</span>
@@ -67,7 +67,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
                   [t.condition, p.condition_en],
                   [t.dealType, p.deal_type_en],
                   [t.furnished, p.furnished_en],
-                  [t.seller, p.seller],
+                  [t.seller, "Owner"],
                 ].map(([label, value]) => (
                   <div key={label as string}>
                     <p className="text-xs text-gray-400 uppercase tracking-wider">{label}</p>
@@ -75,9 +75,9 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
                   </div>
                 ))}
               </div>
-              {p.notes && (
+              {p.notes_en && (
                 <div className="mt-6 pt-4 border-t border-gray-100">
-                  <p className="text-sm text-gray-600 leading-relaxed">{p.notes}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">{p.notes_en}</p>
                 </div>
               )}
             </div>

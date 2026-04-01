@@ -66,15 +66,9 @@ export default function PropertyCard({ property, locale, dict }: PropertyCardPro
           )}
         </div>
 
-        {discountLabel && (
-          <span
-            className={`absolute top-3 right-3 text-xs font-semibold px-2.5 py-1 rounded-full ${
-              p.discount_pct > 0
-                ? "bg-emerald-600 text-white"
-                : "bg-gray-200 text-gray-700"
-            }`}
-          >
-            {discountLabel}
+        {p.discount_pct > 0 && (
+          <span className="absolute top-3 right-3 text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-600 text-white">
+            −{p.discount_pct.toFixed(0)}% {t.discount}
           </span>
         )}
       </div>
@@ -89,7 +83,7 @@ export default function PropertyCard({ property, locale, dict }: PropertyCardPro
         </div>
 
         <p className="text-sm text-gray-500 mb-3">
-          {p.district}, {locale === "ru" ? p.city : "Phuket"}
+          {locale === "ru" ? p.district : p.district_en}, {locale === "ru" ? p.city : "Phuket"}
         </p>
 
         <div className="flex items-center gap-3 text-sm text-gray-600 mb-4">

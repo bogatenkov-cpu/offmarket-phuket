@@ -7,7 +7,7 @@ import type { Locale } from "@/lib/i18n";
 
 interface FiltersProps {
   properties: Property[];
-  districts: string[];
+  districts: { value: string; label: string }[];
   locale: Locale;
   dict: Record<string, any>;
 }
@@ -70,7 +70,7 @@ export default function PropertyFilters({ properties, districts, locale, dict }:
           >
             <option value="">{t.location}</option>
             {districts.map((d) => (
-              <option key={d} value={d}>{d}</option>
+              <option key={d.value} value={d.value}>{d.label}</option>
             ))}
           </select>
 

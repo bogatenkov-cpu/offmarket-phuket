@@ -25,6 +25,9 @@ export interface Property {
   photos_ref: string;
   status: string;
   notes: string;
+  notes_en: string;
+  district_en: string;
+  property_type_en: string;
   price_per_sqm: number;
   market_price_per_sqm: number;
   rating: number;

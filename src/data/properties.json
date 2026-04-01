@@ -37,7 +37,10 @@
       "/photos/1/3.jpg",
       "/photos/1/4.jpg",
       "/photos/1/5.jpg"
-    ]
+    ],
+    "district_en": "Bang Tao",
+    "property_type_en": "Apartment",
+    "notes_en": "Studio with balcony, jungle view; guaranteed rental income; commission 10%"
   },
   {
     "id": 2,
@@ -77,7 +80,10 @@
       "/photos/2/3.jpg",
       "/photos/2/4.jpg",
       "/photos/2/5.jpg"
-    ]
+    ],
+    "district_en": "Bang Tao",
+    "property_type_en": "Apartment",
+    "notes_en": "Studio with terrace, pool view и двор; 4 units available; guaranteed rental income; commission 10%"
   },
   {
     "id": 3,
@@ -117,7 +123,10 @@
       "/photos/3/3.jpg",
       "/photos/3/4.jpg",
       "/photos/3/5.jpg"
-    ]
+    ],
+    "district_en": "Bang Tao",
+    "property_type_en": "Apartment",
+    "notes_en": "1 bedroom, частичный jungle view, terrace with jacuzzi; 2 units available; guaranteed rental income; commission 10%"
   },
   {
     "id": 4,
@@ -157,7 +166,10 @@
       "/photos/4/3.jpg",
       "/photos/4/4.jpg",
       "/photos/4/5.jpg"
-    ]
+    ],
+    "district_en": "Bang Tao",
+    "property_type_en": "Apartment",
+    "notes_en": "1 bedroom, частичный jungle view, terrace with jacuzzi; guaranteed rental income; commission 10%"
   },
   {
     "id": 5,
@@ -197,7 +209,10 @@
       "/photos/5/3.jpg",
       "/photos/5/4.jpg",
       "/photos/5/5.jpg"
-    ]
+    ],
+    "district_en": "Bang Tao",
+    "property_type_en": "Apartment",
+    "notes_en": "2 bedroom, pool view и двор 2-й фазы, terrace with jacuzzi; guaranteed rental income; commission 10%"
   },
   {
     "id": 6,
@@ -231,7 +246,10 @@
     "rating": 5,
     "analyst_comment": "Дисконт 20% к рынку 🔥 | Аренда не указана | Банг Тао — топ-локация | Требует отделки",
     "is_ready": false,
-    "photos": []
+    "photos": [],
+    "district_en": "Bang Tao",
+    "property_type_en": "Apartment",
+    "notes_en": "Over 20% below developer price; furniture included; 2 bedrooms 1 bathroom, courtyard view и pool; commission on top"
   },
   {
     "id": 7,
@@ -265,7 +283,10 @@
     "rating": 2,
     "analyst_comment": "Выше рынка на 22% | Аренда не указана | Банг Тао — топ-локация | Требует отделки",
     "is_ready": false,
-    "photos": []
+    "photos": [],
+    "district_en": "Bang Tao",
+    "property_type_en": "Apartment",
+    "notes_en": "Price below developer; 1 bedroom, pool access; commission 3.5%"
   },
   {
     "id": 8,
@@ -299,7 +320,10 @@
     "rating": 4,
     "analyst_comment": "Аренда не указана | Банг Тао — топ-локация | Требует отделки",
     "is_ready": false,
-    "photos": []
+    "photos": [],
+    "district_en": "Bang Tao",
+    "property_type_en": "Apartment",
+    "notes_en": "Price below developer; 9 units available 38-46м² с 1 спальней; mountain view; near completion; commission 3.5%"
   },
   {
     "id": 9,
@@ -333,7 +357,10 @@
     "rating": 4,
     "analyst_comment": "Дисконт 15% к рынку | Аренда не указана | Банг Тао — топ-локация | Требует отделки",
     "is_ready": false,
-    "photos": []
+    "photos": [],
+    "district_en": "Bang Tao",
+    "property_type_en": "Apartment",
+    "notes_en": "Price below developer; 1 bedroom terrace with pool access; уникальная планировка; commission 3.5%"
   },
   {
     "id": 10,
@@ -367,7 +394,10 @@
     "rating": 2,
     "analyst_comment": "Выше рынка на 22% | Аренда не указана | Требует отделки",
     "is_ready": false,
-    "photos": []
+    "photos": [],
+    "district_en": "Nai Harn",
+    "property_type_en": "Apartment",
+    "notes_en": "Price below developer; 1 bedroom 1 bathroom, garden view; commission 3.5%"
   },
   {
     "id": 11,
@@ -401,7 +431,10 @@
     "rating": 2,
     "analyst_comment": "Выше рынка на 27% | Аренда не указана | Требует отделки",
     "is_ready": false,
-    "photos": []
+    "photos": [],
+    "district_en": "Nai Harn",
+    "property_type_en": "Apartment",
+    "notes_en": "Price below developer; 2 units available; 1 bedroom 1 bathroom; commission 3.5%"
   },
   {
     "id": 12,
@@ -441,7 +474,10 @@
       "/photos/12/3.jpg",
       "/photos/12/4.jpg",
       "/photos/12/5.jpg"
-    ]
+    ],
+    "district_en": "Nai Yang",
+    "property_type_en": "Apartment",
+    "notes_en": "Fully finished apartments for rent or residence; 1 bedroom, pool view; commission 3.5%"
   },
   {
     "id": 13,
@@ -475,7 +511,10 @@
     "rating": 4,
     "analyst_comment": "Дисконт 5% к рынку | Аренда не указана | Банг Тао — топ-локация | Готово к сдаче",
     "is_ready": true,
-    "photos": []
+    "photos": [],
+    "district_en": "Bang Tao",
+    "property_type_en": "Apartment",
+    "notes_en": "Готовые апартаменты для аренды; 1 km to beach Банг Тао (14 min walk); garden view; commission 3.5%"
   },
   {
     "id": 14,
@@ -509,7 +548,10 @@
     "rating": 2,
     "analyst_comment": "Выше рынка на 33% | Аренда не указана | Близко к пляжу | Готово к сдаче",
     "is_ready": true,
-    "photos": []
+    "photos": [],
+    "district_en": "Nai Thon",
+    "property_type_en": "Apartment",
+    "notes_en": "Готовые апартаменты; Freehold; 200м до пляжа Най Янг; частичный sea view; commission 3.5%"
   },
   {
     "id": 15,
@@ -543,7 +585,10 @@
     "rating": 4,
     "analyst_comment": "Аренда не указана | Банг Тао — топ-локация | Требует отделки",
     "is_ready": false,
-    "photos": []
+    "photos": [],
+    "district_en": "Bang Tao",
+    "property_type_en": "Villa",
+    "notes_en": "Вилла Type A; plot 794м²; 4 bedrooms 4+1 bathrooms; pool, garden, 2 parking spots; commission 3.5%"
   },
   {
     "id": 16,
@@ -577,7 +622,10 @@
     "rating": 2,
     "analyst_comment": "Выше рынка на 2% | Аренда не указана | Банг Тао — топ-локация | Требует отделки",
     "is_ready": false,
-    "photos": []
+    "photos": [],
+    "district_en": "Bang Tao",
+    "property_type_en": "Apartment",
+    "notes_en": "1 bedroom, enlarged loggia; commission 5%"
   },
   {
     "id": 17,
@@ -611,7 +659,10 @@
     "rating": 2,
     "analyst_comment": "Выше рынка на 12% | Аренда не указана | Требует отделки",
     "is_ready": false,
-    "photos": []
+    "photos": [],
+    "district_en": "Rawai",
+    "property_type_en": "Apartment",
+    "notes_en": "1 bedroom, balcony 11.39м², jungle view, laundry room, panoramic windows; commission 10%"
   },
   {
     "id": 18,
@@ -645,7 +696,10 @@
     "rating": 4,
     "analyst_comment": "Дисконт 11% к рынку | Аренда не указана | Банг Тао — топ-локация | Требует отделки",
     "is_ready": false,
-    "photos": []
+    "photos": [],
+    "district_en": "Bang Tao",
+    "property_type_en": "Apartment",
+    "notes_en": "Duplex; 2 bedrooms, 3 bathrooms, large terrace, panoramic windows; commission 10%"
   },
   {
     "id": 19,
@@ -679,7 +733,10 @@
     "rating": 2,
     "analyst_comment": "Выше рынка на 1% | Аренда не указана | Требует отделки",
     "is_ready": false,
-    "photos": []
+    "photos": [],
+    "district_en": "Thalang",
+    "property_type_en": "Villa",
+    "notes_en": "Single-story villa; plot 655.81м²; pool, garden, 5 bathrooms, 2 parking spots; commission 5%"
   },
   {
     "id": 20,
@@ -713,7 +770,10 @@
     "rating": 2,
     "analyst_comment": "Выше рынка на 7% | Аренда не указана | Требует отделки",
     "is_ready": false,
-    "photos": []
+    "photos": [],
+    "district_en": "Thalang",
+    "property_type_en": "Villa",
+    "notes_en": "Single-story villa; САМЫЙ БОЛЬШОЙ plot 778.84м²; pool, garden, 5 bathrooms, 2 parking spots; commission 5%"
   },
   {
     "id": 21,
@@ -747,6 +807,9 @@
     "rating": 5,
     "analyst_comment": "Дисконт 50% к рынку 🔥 | Аренда не указана | Готово к сдаче | Уже сдан",
     "is_ready": true,
-    "photos": []
+    "photos": [],
+    "district_en": "Chalong",
+    "property_type_en": "Villa",
+    "notes_en": "4 bedrooms, sea view и горы; инфинити-pool 50м; terrace 64м²; elevator; plot 441м²; commission 13%"
   }
 ]

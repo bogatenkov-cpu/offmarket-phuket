@@ -5,7 +5,7 @@ import PropertyFilters from "@/components/PropertyFilters";
 export default async function PropertiesPage() {
   const dict = await getDictionary("en");
   const properties = getAllProperties();
-  const districts = getUniqueDistricts();
+  const districts = getUniqueDistricts("en");
 
   return (
     <section className="bg-gray-50 min-h-screen">

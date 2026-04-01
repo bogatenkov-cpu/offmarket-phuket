@@ -13,9 +13,15 @@ export function getPropertyById(id: number): Property | undefined {
   return (propertiesData as Property[]).find((p) => p.id === id);
 }
 
-export function getUniqueDistricts(): string[] {
-  const districts = new Set((propertiesData as Property[]).map((p) => p.district));
-  return Array.from(districts).sort();
+export function getUniqueDistricts(locale: "en" | "ru" = "ru"): { value: string; label: string }[] {
+  const props = propertiesData as Property[];
+  const districtMap = new Map<string, string>();
+  for (const p of props) {
+    districtMap.set(p.district, locale === "en" ? p.district_en : p.district);
+  }
+  return Array.from(districtMap.entries())
+    .map(([value, label]) => ({ value, label }))
+    .sort((a, b) => a.label.localeCompare(b.label));
 }
 
 export function getStats() {
