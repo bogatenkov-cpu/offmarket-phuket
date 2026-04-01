@@ -18,9 +18,12 @@
   },
   "stats": {
     "properties": "Properties",
-    "avgDiscount": "Avg. Discount",
+    "maxDiscount": "Up to Discount",
     "locations": "Locations",
-    "ready": "Ready to Move In"
+    "ready": "Ready to Move In",
+    "priceFrom": "Starting from",
+    "ctaBottom": "Find Your Off-Market Deal",
+    "ctaBottomSub": "Browse our curated selection of distress and resale properties in Phuket's top locations."
   },
   "advantages": {
     "title": "Why Off-Market?",

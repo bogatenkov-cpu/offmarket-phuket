@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getDictionary } from "@/lib/i18n";
-import { getStats } from "@/lib/properties";
+import { getStats, formatPrice } from "@/lib/properties";
 
 export default async function HomePage() {
   const dict = await getDictionary("en");
@@ -50,16 +50,16 @@ export default async function HomePage() {
               <p className="text-sm text-gray-500 mt-1">{t.stats.properties}</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl sm:text-4xl font-bold text-emerald-600">{stats.avgDiscount}%</p>
-              <p className="text-sm text-gray-500 mt-1">{t.stats.avgDiscount}</p>
+              <p className="text-3xl sm:text-4xl font-bold text-emerald-600">{stats.maxDiscount}%</p>
+              <p className="text-sm text-gray-500 mt-1">{t.stats.maxDiscount}</p>
             </div>
             <div className="text-center">
               <p className="text-3xl sm:text-4xl font-bold text-gray-900">{stats.locations}</p>
               <p className="text-sm text-gray-500 mt-1">{t.stats.locations}</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl sm:text-4xl font-bold text-gray-900">{stats.ready}</p>
-              <p className="text-sm text-gray-500 mt-1">{t.stats.ready}</p>
+              <p className="text-3xl sm:text-4xl font-bold text-gray-900">{formatPrice(stats.minPrice)}</p>
+              <p className="text-sm text-gray-500 mt-1">{t.stats.priceFrom}</p>
             </div>
           </div>
         </div>
@@ -90,9 +90,9 @@ export default async function HomePage() {
       <section className="bg-emerald-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            {t.hero.title}
+            {t.stats.ctaBottom}
           </h2>
-          <p className="text-emerald-100 mb-8 max-w-2xl mx-auto">{t.hero.subtitle}</p>
+          <p className="text-emerald-100 mb-8 max-w-2xl mx-auto">{t.stats.ctaBottomSub}</p>
           <Link
             href="/en/properties"
             className="inline-block bg-white text-emerald-700 font-semibold px-8 py-4 rounded-xl hover:bg-emerald-50 transition-colors"

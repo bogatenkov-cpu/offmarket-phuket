@@ -21,18 +21,19 @@ export function getUniqueDistricts(): string[] {
 export function getStats() {
   const props = propertiesData as Property[];
   const withDiscount = props.filter((p) => p.discount_pct > 0);
-  const avgDiscount =
-    withDiscount.length > 0
-      ? withDiscount.reduce((sum, p) => sum + p.discount_pct, 0) / withDiscount.length
-      : 0;
+  const maxDiscount = withDiscount.length > 0
+    ? Math.max(...withDiscount.map((p) => p.discount_pct))
+    : 0;
   const districts = new Set(props.map((p) => p.district));
   const ready = props.filter((p) => p.is_ready).length;
+  const minPrice = Math.min(...props.map((p) => p.sale_price_usd));
 
   return {
     total: props.length,
-    avgDiscount: Math.round(avgDiscount),
+    maxDiscount: Math.round(maxDiscount),
     locations: districts.size,
     ready,
+    minPrice,
   };
 }
 
