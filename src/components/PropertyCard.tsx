@@ -32,12 +32,20 @@ export default function PropertyCard({ property, locale, dict }: PropertyCardPro
       href={`/${locale}/properties/${p.slug}`}
       className="group block bg-white rounded-2xl border border-gray-100 hover:border-emerald-200 hover:shadow-lg transition-all duration-300 overflow-hidden"
     >
-      {/* Image placeholder */}
-      <div className="relative h-48 bg-gradient-to-br from-emerald-50 to-emerald-100 flex items-center justify-center">
-        <div className="text-center">
-          <div className="text-4xl mb-1">{p.property_type === "Дом/Коттедж" ? "🏡" : "🏢"}</div>
-          <span className="text-xs text-emerald-700 font-medium">{p.project_name}</span>
-        </div>
+      {/* Image */}
+      <div className="relative h-48 bg-gradient-to-br from-emerald-50 to-emerald-100 flex items-center justify-center overflow-hidden">
+        {p.photos && p.photos.length > 0 ? (
+          <img
+            src={p.photos[0]}
+            alt={p.project_name}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        ) : (
+          <div className="text-center">
+            <div className="text-4xl mb-1">{p.property_type === "Дом/Коттедж" ? "🏡" : "🏢"}</div>
+            <span className="text-xs text-emerald-700 font-medium">{p.project_name}</span>
+          </div>
+        )}
 
         {/* Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-1.5">

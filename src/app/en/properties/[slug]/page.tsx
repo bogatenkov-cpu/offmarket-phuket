@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getDictionary } from "@/lib/i18n";
 import { getPropertyBySlug, getAllProperties, formatPriceExact } from "@/lib/properties";
 import InquiryForm from "@/components/InquiryForm";
+import ImageGallery from "@/components/ImageGallery";
 
 export function generateStaticParams() {
   return getAllProperties().map((p) => ({ slug: p.slug }));
@@ -29,13 +30,8 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-6">
-            {/* Hero image placeholder */}
-            <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl h-64 sm:h-80 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl mb-2">{p.property_type === "Дом/Коттедж" ? "🏡" : "🏢"}</div>
-                <p className="text-emerald-700 font-medium">{p.project_name}</p>
-              </div>
-            </div>
+            {/* Image Gallery */}
+            <ImageGallery photos={p.photos} projectName={p.project_name} propertyType={p.property_type} />
 
             {/* Title & Price */}
             <div className="bg-white rounded-2xl p-6 border border-gray-100">

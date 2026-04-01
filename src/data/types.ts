@@ -30,4 +30,5 @@ export interface Property {
   rating: number;
   analyst_comment: string;
   is_ready: boolean;
+  photos: string[];
 }
