@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "title": "OffMarket Phuket — Distress & Resale Properties Below Market Price",
+    "description": "Exclusive distress and resale properties in Phuket. Assignments from owners at below-market prices. For brokers and buyers."
+  },
+  "nav": {
+    "properties": "Properties",
+    "about": "About",
+    "contact": "Contact",
+    "language": "RU"
+  },
+  "hero": {
+    "badge": "Exclusive off-market deals",
+    "title": "Distress & Resale Properties in Phuket",
+    "subtitle": "Assignments from owners at below-market prices. Ready units and under construction — verified by our analysts.",
+    "cta": "Browse Deals",
+    "ctaSecondary": "I'm a Broker"
+  },
+  "stats": {
+    "properties": "Properties",
+    "avgDiscount": "Avg. Discount",
+    "locations": "Locations",
+    "ready": "Ready to Move In"
+  },
+  "advantages": {
+    "title": "Why Off-Market?",
+    "items": [
+      {
+        "title": "Below Market Price",
+        "desc": "Prices lower than the developer — especially in popular locations and complexes."
+      },
+      {
+        "title": "Scarce Units",
+        "desc": "Units that are no longer available from the developer — previously sold out at launch."
+      },
+      {
+        "title": "Ready to Move In",
+        "desc": "Ideal for buyers looking for immediate occupancy — no construction risk."
+      },
+      {
+        "title": "Verified by Analysts",
+        "desc": "Each property comes with a competitive analysis, market benchmarks, and rental yield data."
+      },
+      {
+        "title": "Transparent Returns",
+        "desc": "Real performance data, not promises — proven rental income and occupancy rates."
+      },
+      {
+        "title": "Sold-Out Projects",
+        "desc": "A rare chance to buy into projects that are fully sold out by the developer."
+      }
+    ]
+  },
+  "catalog": {
+    "title": "Properties",
+    "filters": {
+      "all": "All",
+      "location": "Location",
+      "type": "Type",
+      "bedrooms": "Bedrooms",
+      "priceRange": "Price Range",
+      "status": "Status",
+      "rating": "Rating",
+      "ready": "Ready",
+      "construction": "Under Construction",
+      "studio": "Studio",
+      "apartment": "Apartment",
+      "villa": "Villa",
+      "reset": "Reset Filters",
+      "noResults": "No properties match your filters"
+    },
+    "card": {
+      "from": "from",
+      "sqm": "m²",
+      "bed": "bed",
+      "beds": "beds",
+      "floor": "Floor",
+      "ready": "Ready",
+      "construction": "Under Construction",
+      "discount": "discount",
+      "aboveMarket": "above market",
+      "yield": "yield",
+      "details": "View Details",
+      "commission": "Commission"
+    }
+  },
+  "property": {
+    "back": "← Back to Properties",
+    "overview": "Overview",
+    "analytics": "Analytics",
+    "pricePerSqm": "Price per m²",
+    "marketPrice": "Market Price",
+    "marketPricePerSqm": "Market Price per m²",
+    "discount": "Discount to Market",
+    "rentalYield": "Rental Yield",
+    "rentalIncome": "Annual Rental Income",
+    "commission": "Broker Commission",
+    "area": "Area",
+    "bedrooms": "Bedrooms",
+    "floor": "Floor",
+    "yearBuilt": "Year Built",
+    "condition": "Condition",
+    "dealType": "Deal Type",
+    "furnished": "Furnished",
+    "seller": "Seller",
+    "analystComment": "Analyst Comment",
+    "rating": "Attractiveness Rating",
+    "inquiryTitle": "Interested in this property?",
+    "inquirySubtitle": "Leave your details and we'll get back to you within 24 hours."
+  },
+  "inquiry": {
+    "name": "Your Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message (optional)",
+    "broker": "I'm a broker",
+    "company": "Company",
+    "submit": "Send Inquiry",
+    "success": "Thank you! We'll contact you shortly.",
+    "namePlaceholder": "John Smith",
+    "emailPlaceholder": "john@example.com",
+    "phonePlaceholder": "+66 XX XXX XXXX",
+    "messagePlaceholder": "I'm interested in this property..."
+  },
+  "about": {
+    "title": "About Us",
+    "description": "We specialize in off-market and distress real estate deals in Phuket.",
+    "support": {
+      "title": "Full Broker Support",
+      "items": [
+        { "title": "Expert Analytics", "desc": "Detailed analysis for every property: competitive pricing, market benchmarks, rental yield — all backed by real data." },
+        { "title": "Viewing Organization", "desc": "We book and conduct viewings, coordinate with owners, and answer all client questions." },
+        { "title": "Local Presence", "desc": "Our team is on the ground in Phuket, Samui, and Pattaya — real local expertise." },
+        { "title": "Concierge Service", "desc": "Airport pickup, hotel booking, property tours — the client just needs to choose." },
+        { "title": "Turnkey Deals", "desc": "Full support through closing: lawyers, paperwork, payments, registration — all under control." }
+      ]
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "tagline": "Exclusive off-market properties in Phuket"
+  }
+}

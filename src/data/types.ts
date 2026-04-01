@@ -1,0 +1,33 @@
+export interface Property {
+  id: number;
+  slug: string;
+  project_name: string;
+  city: string;
+  district: string;
+  property_type: string;
+  area_sqm: number;
+  bedrooms: number;
+  floor: string;
+  year_built: number;
+  condition: string;
+  condition_en: string;
+  sale_price_usd: number;
+  market_price_usd: number;
+  discount_pct: number;
+  deal_type: string;
+  deal_type_en: string;
+  furnished: string;
+  furnished_en: string;
+  rental_income_usd: number;
+  rental_yield_pct: number;
+  commission_pct: number;
+  seller: string;
+  photos_ref: string;
+  status: string;
+  notes: string;
+  price_per_sqm: number;
+  market_price_per_sqm: number;
+  rating: number;
+  analyst_comment: string;
+  is_ready: boolean;
+}
