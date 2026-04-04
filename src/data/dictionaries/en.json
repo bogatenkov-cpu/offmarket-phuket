@@ -30,27 +30,27 @@
     "items": [
       {
         "title": "Below Market Price",
-        "desc": "Prices lower than the developer — especially in popular locations and complexes."
+        "desc": "Prices below developer rates — especially in the most sought-after locations and projects."
       },
       {
         "title": "Scarce Units",
-        "desc": "Units that are no longer available from the developer — previously sold out at launch."
+        "desc": "Units no longer available from the developer — sold out at launch."
       },
       {
         "title": "Ready to Move In",
-        "desc": "Ideal for buyers looking for immediate occupancy — no construction risk."
+        "desc": "Completed projects with guaranteed returns — move in or rent out from day one."
       },
       {
         "title": "Verified by Analysts",
         "desc": "Each property comes with a competitive analysis, market benchmarks, and rental yield data."
       },
       {
-        "title": "Transparent Returns",
-        "desc": "Real performance data, not promises — proven rental income and occupancy rates."
+        "title": "All in One Place",
+        "desc": "The only platform with resale listings from multiple agencies and developers — all in one search."
       },
       {
-        "title": "Sold-Out Projects",
-        "desc": "A rare chance to buy into projects that are fully sold out by the developer."
+        "title": "Private Access",
+        "desc": "Deals unavailable on the open market — exclusive access, not listed anywhere else."
       }
     ]
   },
