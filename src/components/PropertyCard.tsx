@@ -25,8 +25,6 @@ export default function PropertyCard({ property, locale, dict }: PropertyCardPro
       ? `+${Math.abs(p.discount_pct).toFixed(1)}% ${t.aboveMarket}`
       : null;
 
-  const ratingStars = "★".repeat(p.rating) + "☆".repeat(5 - p.rating);
-
   return (
     <Link
       href={`/${locale}/properties/${p.slug}`}
@@ -79,7 +77,6 @@ export default function PropertyCard({ property, locale, dict }: PropertyCardPro
           <h3 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition line-clamp-1">
             {p.project_name}
           </h3>
-          <span className="text-xs text-amber-500 whitespace-nowrap">{ratingStars}</span>
         </div>
 
         <p className="text-sm text-gray-500 mb-3">

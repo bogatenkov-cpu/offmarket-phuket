@@ -18,8 +18,6 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
 
   const p = property;
   const t = dict.property;
-  const ratingStars = "★".repeat(p.rating) + "☆".repeat(5 - p.rating);
-
   return (
     <section className="bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -39,10 +37,6 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
                 <div>
                   <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">{p.project_name}</h1>
                   <p className="text-gray-500 mt-1">{p.district}, {p.city}</p>
-                  <div className="flex items-center gap-2 mt-2">
-                    <span className="text-amber-500">{ratingStars}</span>
-                    <span className="text-sm text-gray-400">{p.rating}/5</span>
-                  </div>
                 </div>
                 <div className="text-right">
                   <p className="text-3xl font-bold text-gray-900">{formatPriceExact(p.sale_price_usd)}</p>
