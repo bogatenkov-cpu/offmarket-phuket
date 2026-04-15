@@ -18,15 +18,6 @@ export default function PropertyCard({ property, locale, dict }: PropertyCardPro
       ? dict.catalog.filters.studio
       : `${p.bedrooms} ${p.bedrooms === 1 ? t.bed : t.beds}`;
 
-  const discountLabel =
-    p.discount_pct > 0
-      ? `−${p.discount_pct.toFixed(1)}% ${t.discount}`
-      : p.discount_pct < 0
-      ? `+${Math.abs(p.discount_pct).toFixed(1)}% ${t.aboveMarket}`
-      : null;
-
-  const ratingStars = "★".repeat(p.rating) + "☆".repeat(5 - p.rating);
-
   return (
     <Link
       href={`/${locale}/properties/${p.slug}`}
@@ -66,7 +57,7 @@ export default function PropertyCard({ property, locale, dict }: PropertyCardPro
           )}
         </div>
 
-        {p.discount_pct > 0 && (
+        {p.discount_pct >= 5 && (
           <span className="absolute top-3 right-3 text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-600 text-white">
             −{p.discount_pct.toFixed(0)}% {t.discount}
           </span>
@@ -79,7 +70,6 @@ export default function PropertyCard({ property, locale, dict }: PropertyCardPro
           <h3 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition line-clamp-1">
             {p.project_name}
           </h3>
-          <span className="text-xs text-amber-500 whitespace-nowrap">{ratingStars}</span>
         </div>
 
         <p className="text-sm text-gray-500 mb-3">
