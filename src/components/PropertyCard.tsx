@@ -39,7 +39,7 @@ export default function PropertyCard({ property, locale, dict }: PropertyCardPro
         )}
 
         {/* Badges */}
-        <div className="absolute top-3 left-3 flex flex-col gap-1.5">
+        <div className="absolute top-3 left-3 flex flex-col items-start gap-1.5">
           {p.is_ready && (
             <span className="bg-emerald-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">
               {t.ready}
