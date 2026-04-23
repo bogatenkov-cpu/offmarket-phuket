@@ -32,6 +32,8 @@ export interface Property {
   market_price_per_sqm: number;
   rating: number;
   analyst_comment: string;
+  analyst_comment_en: string;
+  floor_en: string;
   is_ready: boolean;
   photos: string[];
 }
