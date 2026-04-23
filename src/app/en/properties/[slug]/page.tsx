@@ -56,7 +56,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
                 {[
                   [t.area, `${p.area_sqm} m²`],
                   [t.bedrooms, p.bedrooms === 0 ? "Studio" : `${p.bedrooms}`],
-                  [t.floor, p.floor],
+                  [t.floor, p.floor_en],
                   [t.yearBuilt, `${p.year_built}`],
                   [t.condition, p.condition_en],
                   [t.dealType, p.deal_type_en],
@@ -94,12 +94,12 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
                   </div>
                 ))}
               </div>
-              {p.analyst_comment && (
+              {p.analyst_comment_en && (
                 <div className="mt-6 p-4 bg-emerald-50 rounded-xl border border-emerald-100">
                   <p className="text-xs text-emerald-600 font-semibold uppercase tracking-wider mb-1">
                     {t.analystComment}
                   </p>
-                  <p className="text-sm text-emerald-800">{p.analyst_comment}</p>
+                  <p className="text-sm text-emerald-800">{p.analyst_comment_en}</p>
                 </div>
               )}
             </div>

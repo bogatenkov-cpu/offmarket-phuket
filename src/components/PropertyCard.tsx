@@ -81,7 +81,7 @@ export default function PropertyCard({ property, locale, dict }: PropertyCardPro
           <span className="w-1 h-1 bg-gray-300 rounded-full" />
           <span>{bedroomsLabel}</span>
           <span className="w-1 h-1 bg-gray-300 rounded-full" />
-          <span>{t.floor} {p.floor}</span>
+          <span>{t.floor} {locale === "ru" ? p.floor : p.floor_en}</span>
         </div>
 
         <div className="flex items-end justify-between">

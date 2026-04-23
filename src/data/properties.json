@@ -40,7 +40,9 @@
     ],
     "district_en": "Bang Tao",
     "property_type_en": "Apartment",
-    "notes_en": "Studio with balcony, jungle view; guaranteed rental income; commission 10%"
+    "notes_en": "Studio with balcony, jungle view; guaranteed rental income; commission 10%",
+    "floor_en": "6th",
+    "analyst_comment_en": "6.5% rental yield | Bang Tao — top location | Ready to rent | Already rented"
   },
   {
     "id": 2,
@@ -83,7 +85,9 @@
     ],
     "district_en": "Bang Tao",
     "property_type_en": "Apartment",
-    "notes_en": "Studio with terrace, pool view и двор; 4 units available; guaranteed rental income; commission 10%"
+    "notes_en": "Studio with terrace, pool view и двор; 4 units available; guaranteed rental income; commission 10%",
+    "floor_en": "1st",
+    "analyst_comment_en": "11% above market | Bang Tao — top location | Ready to rent | Already rented"
   },
   {
     "id": 3,
@@ -126,7 +130,9 @@
     ],
     "district_en": "Bang Tao",
     "property_type_en": "Apartment",
-    "notes_en": "1 bedroom, частичный jungle view, terrace with jacuzzi; 2 units available; guaranteed rental income; commission 10%"
+    "notes_en": "1 bedroom, частичный jungle view, terrace with jacuzzi; 2 units available; guaranteed rental income; commission 10%",
+    "floor_en": "1st",
+    "analyst_comment_en": "8% above market | Bang Tao — top location | Ready to rent | Already rented"
   },
   {
     "id": 4,
@@ -169,7 +175,9 @@
     ],
     "district_en": "Bang Tao",
     "property_type_en": "Apartment",
-    "notes_en": "1 bedroom, частичный jungle view, terrace with jacuzzi; guaranteed rental income; commission 10%"
+    "notes_en": "1 bedroom, частичный jungle view, terrace with jacuzzi; guaranteed rental income; commission 10%",
+    "floor_en": "1st",
+    "analyst_comment_en": "5% above market | Bang Tao — top location | Ready to rent | Already rented"
   },
   {
     "id": 5,
@@ -212,7 +220,9 @@
     ],
     "district_en": "Bang Tao",
     "property_type_en": "Apartment",
-    "notes_en": "2 bedroom, pool view и двор 2-й фазы, terrace with jacuzzi; guaranteed rental income; commission 10%"
+    "notes_en": "2 bedroom, pool view и двор 2-й фазы, terrace with jacuzzi; guaranteed rental income; commission 10%",
+    "floor_en": "1st",
+    "analyst_comment_en": "5% above market | Bang Tao — top location | Ready to rent | Already rented"
   },
   {
     "id": 6,
@@ -260,7 +270,9 @@
     ],
     "district_en": "Bang Tao",
     "property_type_en": "Apartment",
-    "notes_en": "Over 20% below developer price; furniture included; 2 bedrooms 1 bathroom, courtyard view и pool; commission on top"
+    "notes_en": "Over 20% below developer price; furniture included; 2 bedrooms 1 bathroom, courtyard view и pool; commission on top",
+    "floor_en": "6th, block C",
+    "analyst_comment_en": "20% below market 🔥 | No rental data | Bang Tao — top location | Needs finishing"
   },
   {
     "id": 7,
@@ -310,7 +322,9 @@
     ],
     "district_en": "Bang Tao",
     "property_type_en": "Apartment",
-    "notes_en": "Price below developer; 1 bedroom, pool access; commission 3.5%"
+    "notes_en": "Price below developer; 1 bedroom, pool access; commission 3.5%",
+    "floor_en": "1st, block C",
+    "analyst_comment_en": "22% above market | No rental data | Bang Tao — top location | Needs finishing"
   },
   {
     "id": 8,
@@ -360,7 +374,9 @@
     ],
     "district_en": "Bang Tao",
     "property_type_en": "Apartment",
-    "notes_en": "Price below developer; 9 units available 38-46м² с 1 спальней; mountain view; near completion; commission 3.5%"
+    "notes_en": "Price below developer; 9 units available 38-46м² с 1 спальней; mountain view; near completion; commission 3.5%",
+    "floor_en": "1–3, blocks C/F/G/H",
+    "analyst_comment_en": "No rental data | Bang Tao — top location | Needs finishing"
   },
   {
     "id": 9,
@@ -432,7 +448,9 @@
     ],
     "district_en": "Bang Tao",
     "property_type_en": "Apartment",
-    "notes_en": "Price below developer; 1 bedroom terrace with pool access; уникальная планировка; commission 3.5%"
+    "notes_en": "Price below developer; 1 bedroom terrace with pool access; уникальная планировка; commission 3.5%",
+    "floor_en": "1st",
+    "analyst_comment_en": "15% below market | No rental data | Bang Tao — top location | Needs finishing"
   },
   {
     "id": 10,
@@ -477,7 +495,9 @@
     ],
     "district_en": "Nai Harn",
     "property_type_en": "Apartment",
-    "notes_en": "Price below developer; 1 bedroom 1 bathroom, garden view; commission 3.5%"
+    "notes_en": "Price below developer; 1 bedroom 1 bathroom, garden view; commission 3.5%",
+    "floor_en": "2nd",
+    "analyst_comment_en": "22% above market | No rental data | Needs finishing"
   },
   {
     "id": 11,
@@ -522,7 +542,9 @@
     ],
     "district_en": "Nai Harn",
     "property_type_en": "Apartment",
-    "notes_en": "Price below developer; 2 units available; 1 bedroom 1 bathroom; commission 3.5%"
+    "notes_en": "Price below developer; 2 units available; 1 bedroom 1 bathroom; commission 3.5%",
+    "floor_en": "3rd & 6th",
+    "analyst_comment_en": "27% above market | No rental data | Needs finishing"
   },
   {
     "id": 12,
@@ -565,7 +587,9 @@
     ],
     "district_en": "Nai Yang",
     "property_type_en": "Apartment",
-    "notes_en": "Fully finished apartments for rent or residence; 1 bedroom, pool view; commission 3.5%"
+    "notes_en": "Fully finished apartments for rent or residence; 1 bedroom, pool view; commission 3.5%",
+    "floor_en": "2nd",
+    "analyst_comment_en": "6% above market | No rental data | Close to beach | Ready to rent"
   },
   {
     "id": 13,
@@ -623,7 +647,9 @@
     ],
     "district_en": "Bang Tao",
     "property_type_en": "Apartment",
-    "notes_en": "Готовые апартаменты для аренды; 1 km to beach Банг Тао (14 min walk); garden view; commission 3.5%"
+    "notes_en": "Готовые апартаменты для аренды; 1 km to beach Банг Тао (14 min walk); garden view; commission 3.5%",
+    "floor_en": "5th, block A1",
+    "analyst_comment_en": "5% below market | No rental data | Bang Tao — top location | Ready to rent"
   },
   {
     "id": 14,
@@ -690,7 +716,9 @@
     ],
     "district_en": "Nai Thon",
     "property_type_en": "Apartment",
-    "notes_en": "Готовые апартаменты; Freehold; 200м до пляжа Най Янг; частичный sea view; commission 3.5%"
+    "notes_en": "Готовые апартаменты; Freehold; 200м до пляжа Най Янг; частичный sea view; commission 3.5%",
+    "floor_en": "4th, block B2",
+    "analyst_comment_en": "33% above market | No rental data | Close to beach | Ready to rent"
   },
   {
     "id": 15,
@@ -737,7 +765,9 @@
     ],
     "district_en": "Bang Tao",
     "property_type_en": "Villa",
-    "notes_en": "Вилла Type A; plot 794м²; 4 bedrooms 4+1 bathrooms; pool, garden, 2 parking spots; commission 3.5%"
+    "notes_en": "Вилла Type A; plot 794м²; 4 bedrooms 4+1 bathrooms; pool, garden, 2 parking spots; commission 3.5%",
+    "floor_en": "1st (villa)",
+    "analyst_comment_en": "No rental data | Bang Tao — top location | Needs finishing"
   },
   {
     "id": 16,
@@ -787,7 +817,9 @@
     ],
     "district_en": "Bang Tao",
     "property_type_en": "Apartment",
-    "notes_en": "1 bedroom, enlarged loggia; commission 5%"
+    "notes_en": "1 bedroom, enlarged loggia; commission 5%",
+    "floor_en": "2nd",
+    "analyst_comment_en": "2% above market | No rental data | Bang Tao — top location | Needs finishing"
   },
   {
     "id": 17,
@@ -832,7 +864,9 @@
     ],
     "district_en": "Rawai",
     "property_type_en": "Apartment",
-    "notes_en": "1 bedroom, balcony 11.39м², jungle view, laundry room, panoramic windows; commission 10%"
+    "notes_en": "1 bedroom, balcony 11.39м², jungle view, laundry room, panoramic windows; commission 10%",
+    "floor_en": "4th",
+    "analyst_comment_en": "12% above market | No rental data | Needs finishing"
   },
   {
     "id": 18,
@@ -880,7 +914,9 @@
     ],
     "district_en": "Bang Tao",
     "property_type_en": "Apartment",
-    "notes_en": "Duplex; 2 bedrooms, 3 bathrooms, large terrace, panoramic windows; commission 10%"
+    "notes_en": "Duplex; 2 bedrooms, 3 bathrooms, large terrace, panoramic windows; commission 10%",
+    "floor_en": "3rd–4th, duplex",
+    "analyst_comment_en": "11% below market | No rental data | Bang Tao — top location | Needs finishing"
   },
   {
     "id": 19,
@@ -947,7 +983,9 @@
     ],
     "district_en": "Thalang",
     "property_type_en": "Villa",
-    "notes_en": "Single-story villa; plot 655.81м²; pool, garden, 5 bathrooms, 2 parking spots; commission 5%"
+    "notes_en": "Single-story villa; plot 655.81м²; pool, garden, 5 bathrooms, 2 parking spots; commission 5%",
+    "floor_en": "1st (villa)",
+    "analyst_comment_en": "1% above market | No rental data | Needs finishing"
   },
   {
     "id": 20,
@@ -1014,7 +1052,9 @@
     ],
     "district_en": "Thalang",
     "property_type_en": "Villa",
-    "notes_en": "Single-story villa; САМЫЙ БОЛЬШОЙ plot 778.84м²; pool, garden, 5 bathrooms, 2 parking spots; commission 5%"
+    "notes_en": "Single-story villa; САМЫЙ БОЛЬШОЙ plot 778.84м²; pool, garden, 5 bathrooms, 2 parking spots; commission 5%",
+    "floor_en": "1st (villa)",
+    "analyst_comment_en": "7% above market | No rental data | Needs finishing"
   },
   {
     "id": 21,
@@ -1061,6 +1101,8 @@
     ],
     "district_en": "Chalong",
     "property_type_en": "Villa",
-    "notes_en": "4 bedrooms, sea view и горы; инфинити-pool 50м; terrace 64м²; elevator; plot 441м²; commission 13%"
+    "notes_en": "4 bedrooms, sea view и горы; инфинити-pool 50м; terrace 64м²; elevator; plot 441м²; commission 13%",
+    "floor_en": "4-storey villa",
+    "analyst_comment_en": "50% below market 🔥 | No rental data | Ready to rent | Already rented"
   }
 ]
