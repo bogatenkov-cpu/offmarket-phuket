@@ -15,36 +15,43 @@ export default function Header({ locale, dict }: HeaderProps) {
   const t = dict.nav;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link href={`/${locale}`} className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">OM</span>
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-rule">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-3.5">
+          <Link href={`/${locale}`} className="flex items-center gap-2.5 text-ink no-underline">
+            <div className="w-[30px] h-[30px] bg-navy text-white flex items-center justify-center font-display text-lg leading-none">
+              o
             </div>
-            <span className="font-semibold text-lg tracking-tight">
-              OffMarket <span className="text-emerald-600">Phuket</span>
-            </span>
+            <div className="font-bold text-[17px] tracking-tight">
+              offmarket<span className="text-coral">.</span>phuket
+            </div>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-7">
             <Link
               href={`/${locale}/properties`}
-              className="text-sm font-medium text-gray-600 hover:text-gray-900 transition"
+              className="text-sm font-medium text-ink-soft hover:text-ink transition pb-2 border-b-2 border-transparent"
             >
               {t.properties}
             </Link>
             <Link
               href={`/${locale}/about`}
-              className="text-sm font-medium text-gray-600 hover:text-gray-900 transition"
+              className="text-sm font-medium text-ink-soft hover:text-ink transition pb-2 border-b-2 border-transparent"
             >
               {t.about}
             </Link>
+            <span className="w-px h-4 bg-rule" />
             <Link
               href={`/${otherLocale}`}
-              className="text-sm font-medium text-emerald-600 hover:text-emerald-700 transition border border-emerald-200 rounded-full px-3 py-1"
+              className="px-2.5 py-1.5 border border-rule rounded-md text-xs text-ink-soft hover:border-ink-soft transition"
             >
-              {t.language}
+              {t.language} · USD
+            </Link>
+            <Link
+              href={`/${locale}/properties`}
+              className="bg-navy text-white px-4 py-2 text-sm font-medium rounded-md hover:bg-navy-2 transition"
+            >
+              {t.requestAccess}
             </Link>
           </nav>
 
@@ -65,27 +72,34 @@ export default function Header({ locale, dict }: HeaderProps) {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-white">
-          <div className="px-4 py-3 space-y-3">
+        <div className="md:hidden border-t border-rule bg-white">
+          <div className="px-4 py-4 space-y-3">
             <Link
               href={`/${locale}/properties`}
-              className="block text-sm font-medium text-gray-600"
+              className="block text-sm font-medium text-ink-soft"
               onClick={() => setMenuOpen(false)}
             >
               {t.properties}
             </Link>
             <Link
               href={`/${locale}/about`}
-              className="block text-sm font-medium text-gray-600"
+              className="block text-sm font-medium text-ink-soft"
               onClick={() => setMenuOpen(false)}
             >
               {t.about}
             </Link>
             <Link
               href={`/${otherLocale}`}
-              className="block text-sm font-medium text-emerald-600"
+              className="block text-sm font-medium text-ink-soft"
             >
               {t.language}
+            </Link>
+            <Link
+              href={`/${locale}/properties`}
+              className="block bg-navy text-white px-4 py-2.5 text-sm font-medium rounded-md text-center mt-3"
+              onClick={() => setMenuOpen(false)}
+            >
+              {t.requestAccess}
             </Link>
           </div>
         </div>
