@@ -7,96 +7,56 @@ interface InquiryFormProps {
   propertyName?: string;
 }
 
-export default function InquiryForm({ dict, propertyName }: InquiryFormProps) {
+export default function InquiryForm({ dict }: InquiryFormProps) {
   const t = dict.inquiry;
   const [submitted, setSubmitted] = useState(false);
   const [isBroker, setIsBroker] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: connect to Supabase or email service
     setSubmitted(true);
   };
 
   if (submitted) {
     return (
-      <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 text-center">
-        <div className="text-4xl mb-3">✓</div>
-        <p className="text-emerald-800 font-medium">{t.success}</p>
+      <div className="bg-mint-soft border border-mint-border rounded-xl p-6 text-center">
+        <div className="text-3xl mb-2">✓</div>
+        <p className="text-mint font-medium">{t.success}</p>
       </div>
     );
   }
 
+  const inputClass =
+    "w-full px-3 py-2.5 border border-rule rounded-md text-[14px] text-ink placeholder:text-ink-mute outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy/50 transition";
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">{t.name}</label>
+    <form onSubmit={handleSubmit} className="space-y-2.5">
+      <input type="text" required placeholder={t.namePlaceholder} className={inputClass} />
+      <input type="email" required placeholder={t.emailPlaceholder} className={inputClass} />
+      <input type="tel" placeholder={t.phonePlaceholder} className={inputClass} />
+      <textarea rows={3} placeholder={t.messagePlaceholder} className={`${inputClass} resize-none`} />
+
+      <label className="flex items-center gap-2 text-[13px] text-ink-soft cursor-pointer pt-1">
         <input
-          type="text"
-          required
-          placeholder={t.namePlaceholder}
-          className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition"
+          type="checkbox"
+          checked={isBroker}
+          onChange={(e) => setIsBroker(e.target.checked)}
+          className="w-4 h-4 accent-navy"
         />
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">{t.email}</label>
-          <input
-            type="email"
-            required
-            placeholder={t.emailPlaceholder}
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">{t.phone}</label>
-          <input
-            type="tel"
-            placeholder={t.phonePlaceholder}
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition"
-          />
-        </div>
-      </div>
-
-      <div>
-        <label className="flex items-center gap-2 cursor-pointer">
-          <input
-            type="checkbox"
-            checked={isBroker}
-            onChange={(e) => setIsBroker(e.target.checked)}
-            className="w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500"
-          />
-          <span className="text-sm text-gray-700">{t.broker}</span>
-        </label>
-      </div>
+        {t.broker}
+      </label>
 
       {isBroker && (
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">{t.company}</label>
-          <input
-            type="text"
-            placeholder="Agency Name"
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition"
-          />
-        </div>
+        <input type="text" placeholder={t.company} className={inputClass} />
       )}
-
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">{t.message}</label>
-        <textarea
-          rows={3}
-          placeholder={t.messagePlaceholder}
-          className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition resize-none"
-        />
-      </div>
 
       <button
         type="submit"
-        className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 px-6 rounded-xl transition-colors"
+        className="w-full bg-coral hover:bg-coral/90 text-white font-semibold py-3 px-4 rounded-md text-[15px] transition mt-2"
       >
         {t.submit}
       </button>
+      <div className="text-[11px] text-ink-mute text-center pt-1">{t.confidential}</div>
     </form>
   );
 }

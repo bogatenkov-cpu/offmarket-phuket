@@ -10,66 +10,99 @@ interface ImageGalleryProps {
 
 export default function ImageGallery({ photos, projectName, propertyType }: ImageGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [lightbox, setLightbox] = useState(false);
 
   if (!photos || photos.length === 0) {
     return (
-      <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl h-64 sm:h-80 flex items-center justify-center">
+      <div className="bg-surface-2 rounded-2xl h-64 sm:h-80 flex items-center justify-center border border-rule">
         <div className="text-center">
           <div className="text-6xl mb-2">{propertyType === "Дом/Коттедж" ? "🏡" : "🏢"}</div>
-          <p className="text-emerald-700 font-medium">{projectName}</p>
+          <p className="text-ink-soft font-medium">{projectName}</p>
         </div>
       </div>
     );
   }
 
+  // Magazine layout: 1 large + 4 small (2x2). Fallback to single image when fewer.
+  const main = photos[activeIndex];
+  const thumbs = photos.filter((_, i) => i !== activeIndex).slice(0, 4);
+  const remaining = Math.max(0, photos.length - 5);
+
   return (
-    <div className="space-y-3">
-      {/* Main image */}
-      <div className="relative rounded-2xl overflow-hidden h-64 sm:h-96 bg-gray-100">
-        <img
-          src={photos[activeIndex]}
-          alt={`${projectName} - ${activeIndex + 1}`}
-          className="w-full h-full object-cover"
-        />
-        {photos.length > 1 && (
-          <>
+    <>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 h-[260px] sm:h-[448px]">
+        {/* Main */}
+        <button
+          onClick={() => setLightbox(true)}
+          className="relative bg-black overflow-hidden sm:row-span-2 sm:col-span-2 rounded-2xl sm:rounded-l-2xl sm:rounded-tr-none cursor-zoom-in"
+        >
+          <img src={main} alt={projectName} className="w-full h-full object-cover" />
+        </button>
+
+        {/* Thumbs */}
+        {thumbs.map((photo, i) => {
+          const showOverlay = i === thumbs.length - 1 && remaining > 0;
+          const photoIndex = photos.indexOf(photo);
+          const corner =
+            i === 0 ? "sm:rounded-tr-2xl" : i === 3 ? "sm:rounded-br-2xl" : "";
+          return (
             <button
-              onClick={() => setActiveIndex((prev) => (prev - 1 + photos.length) % photos.length)}
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/40 hover:bg-black/60 text-white rounded-full flex items-center justify-center transition"
-              aria-label="Previous"
+              key={photoIndex}
+              onClick={() => (showOverlay ? setLightbox(true) : setActiveIndex(photoIndex))}
+              className={`relative bg-black overflow-hidden hidden sm:block cursor-pointer ${corner}`}
             >
-              ‹
+              <img src={photo} alt={`${projectName} ${photoIndex + 1}`} className="w-full h-full object-cover" />
+              {showOverlay && (
+                <div className="absolute inset-0 bg-black/55 flex items-center justify-center text-white text-sm font-medium">
+                  + {remaining + 1} photos
+                </div>
+              )}
             </button>
-            <button
-              onClick={() => setActiveIndex((prev) => (prev + 1) % photos.length)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/40 hover:bg-black/60 text-white rounded-full flex items-center justify-center transition"
-              aria-label="Next"
-            >
-              ›
-            </button>
-            <div className="absolute bottom-3 right-3 bg-black/50 text-white text-xs px-2.5 py-1 rounded-full">
-              {activeIndex + 1} / {photos.length}
-            </div>
-          </>
-        )}
+          );
+        })}
       </div>
 
-      {/* Thumbnails */}
-      {photos.length > 1 && (
-        <div className="flex gap-2 overflow-x-auto pb-1">
-          {photos.map((photo, i) => (
-            <button
-              key={i}
-              onClick={() => setActiveIndex(i)}
-              className={`shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition ${
-                i === activeIndex ? "border-emerald-500" : "border-transparent opacity-70 hover:opacity-100"
-              }`}
-            >
-              <img src={photo} alt={`${projectName} - ${i + 1}`} className="w-full h-full object-cover" />
-            </button>
-          ))}
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4"
+          onClick={() => setLightbox(false)}
+        >
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setActiveIndex((i) => (i - 1 + photos.length) % photos.length);
+            }}
+            className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full text-2xl"
+          >
+            ‹
+          </button>
+          <img
+            src={photos[activeIndex]}
+            alt={projectName}
+            className="max-w-full max-h-full object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setActiveIndex((i) => (i + 1) % photos.length);
+            }}
+            className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full text-2xl"
+          >
+            ›
+          </button>
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/60 text-white text-sm px-3 py-1.5 rounded-full">
+            {activeIndex + 1} / {photos.length}
+          </div>
+          <button
+            onClick={() => setLightbox(false)}
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 bg-white/10 hover:bg-white/20 text-white rounded-full"
+          >
+            ✕
+          </button>
         </div>
       )}
-    </div>
+    </>
   );
 }

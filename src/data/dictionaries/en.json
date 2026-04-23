@@ -1,146 +1,201 @@
 {
   "meta": {
-    "title": "OffMarket Phuket — Distress & Resale Properties Below Market Price",
-    "description": "Exclusive distress and resale properties in Phuket. Assignments from owners at below-market prices. For brokers and buyers."
+    "title": "OffMarket Phuket — Off-market & distress properties below the developer",
+    "description": "Owner assignments and distressed resales in Phuket, priced below the developer. Verified by analysts, circulated to credentialed buyers and brokers."
   },
   "nav": {
     "properties": "Properties",
     "about": "About",
     "contact": "Contact",
-    "language": "RU"
+    "language": "RU",
+    "requestAccess": "Request access"
   },
   "hero": {
-    "badge": "Exclusive off-market deals",
-    "title": "Distress & Resale Properties in Phuket",
-    "subtitle": "Assignments from owners at below-market prices. Ready units and under construction — verified by analysts.",
-    "cta": "Browse Deals",
-    "ctaSecondary": "I'm a Broker"
-  },
-  "stats": {
-    "properties": "Properties",
-    "maxDiscount": "Up to Discount",
-    "locations": "Locations",
-    "ready": "Ready to Move In",
-    "priceFrom": "Starting from",
-    "ctaBottom": "Find Your Off-Market Deal",
-    "ctaBottomSub": "Browse our curated selection of distress and resale properties in Phuket's top locations."
-  },
-  "advantages": {
-    "title": "Why Off-Market?",
-    "items": [
-      {
-        "title": "Below Market Price",
-        "desc": "Prices below developer rates — especially in the most sought-after locations and projects."
-      },
-      {
-        "title": "Scarce Units",
-        "desc": "Units no longer available from the developer — sold out at launch."
-      },
-      {
-        "title": "Ready to Move In",
-        "desc": "Completed projects with guaranteed returns — move in or rent out from day one."
-      },
-      {
-        "title": "Verified by Analysts",
-        "desc": "Each property comes with a competitive analysis, market benchmarks, and rental yield data."
-      },
-      {
-        "title": "All in One Place",
-        "desc": "The only platform with resale listings from multiple agencies and developers — all in one search."
-      },
-      {
-        "title": "Private Access",
-        "desc": "Deals unavailable on the open market — exclusive access, not listed anywhere else."
-      }
+    "badge": "21 live listings · updated today",
+    "title": "Phuket properties",
+    "titleAccent": "off",
+    "titleTail": "the open market",
+    "subtitle": "Owner assignments and distressed resales, priced below the developer. Every listing reviewed by our analyst. Shown to you after a two-minute access request.",
+    "searchTitle": "Find a property",
+    "searchAllPhuket": "All Phuket",
+    "searchAnyType": "Any property",
+    "searchAnyPrice": "Any price",
+    "searchAnyStage": "Any stage",
+    "searchCta": "Search · {n} listings",
+    "quickChips": [
+      ["Under $250k", "5 listings"],
+      ["Distressed ≥10%", "4 listings"],
+      ["Ready + yielding", "8 listings"],
+      ["Bang Tao", "14 listings"],
+      ["New this week", "3 listings"]
     ]
   },
+  "stats": {
+    "liveListings": "live listings",
+    "biggestMarkdown": "biggest markdown",
+    "biggestMarkdownSub": "verified off-market",
+    "avgYield": "avg rental yield",
+    "avgYieldSub": "on ready inventory",
+    "lowestEntry": "lowest entry",
+    "lowestEntrySub": "Bang Tao studio"
+  },
+  "advantages": {
+    "kicker": "How it works",
+    "title": "From",
+    "titleAccent": "request",
+    "titleTail": "to deal, typically in four weeks.",
+    "subtitle": "We surface what developers and brokers don't advertise: owner-released contracts, distressed resales, and scarce units in sold-out buildings.",
+    "items": [
+      { "title": "Request access", "desc": "Two-minute form. We verify you are a serious buyer or credentialed broker." },
+      { "title": "Browse the register", "desc": "Full listings, analyst notes, benchmark pricing, rental yield data." },
+      { "title": "Book a viewing", "desc": "In person on island, or live video with our local agent. Same week." },
+      { "title": "Close the deal", "desc": "We coordinate assignment paperwork, escrow, and hand-over with the seller." }
+    ]
+  },
+  "featured": {
+    "kicker": "Today's pick",
+    "title": "Biggest markdowns this week",
+    "seeAll": "See all {n} listings →"
+  },
+  "districts": {
+    "title": "Browse by district",
+    "all": "All districts →",
+    "listings": "listings",
+    "from": "from"
+  },
+  "ctaBand": {
+    "kicker": "Request access",
+    "title": "Unlock the full register in two",
+    "titleAccent": "minutes",
+    "subtitle": "21 verified listings, full analyst reports, benchmark pricing and direct contact with our local agent. No mailing list, no newsletter, no public catalog.",
+    "primary": "Request access →",
+    "secondary": "I'm a broker"
+  },
   "catalog": {
-    "title": "Properties",
+    "title": "Properties in Phuket",
+    "subtitle": "Off-market listings, reviewed by our analyst.",
     "filters": {
-      "all": "All",
-      "location": "Location",
-      "type": "Type",
-      "bedrooms": "Bedrooms",
-      "priceRange": "Price Range",
-      "status": "Status",
-      "rating": "Rating",
-      "ready": "Ready",
-      "construction": "Under Construction",
+      "filterLabel": "Filter:",
+      "allLocations": "All Phuket",
+      "anyType": "Any property",
+      "anyRooms": "Any rooms",
+      "anyStage": "Any stage",
       "studio": "Studio",
       "apartment": "Apartment",
       "villa": "Villa",
-      "reset": "Reset Filters",
+      "ready": "Ready",
+      "construction": "Under construction",
+      "sortDiscount": "Biggest markdown",
+      "sortPriceAsc": "Lowest price",
+      "sortPriceDesc": "Highest price",
+      "sortAreaDesc": "Largest area",
+      "sortYieldDesc": "Highest yield",
+      "sortRating": "Top rated",
+      "reset": "Clear all",
+      "showing": "Showing",
+      "listings": "off-market listings",
       "noResults": "No properties match your filters"
     },
     "card": {
-      "from": "from",
-      "sqm": "m²",
-      "bed": "bed",
-      "beds": "beds",
-      "floor": "Floor",
       "ready": "Ready",
-      "construction": "Under Construction",
-      "discount": "discount",
-      "aboveMarket": "above market",
+      "construction": "Under construction",
+      "offMarket": "off market",
+      "featured": "Featured",
       "yield": "yield",
-      "details": "View Details",
-      "commission": "Commission"
+      "floor": "Floor",
+      "bed": "bd",
+      "beds": "bd"
     }
   },
   "property": {
-    "back": "← Back to Properties",
+    "back": "← Back to properties",
+    "askingPrice": "Asking price",
+    "perSqm": "per m²",
+    "marketEstimate": "Market estimate",
+    "youSave": "You save",
+    "requestDossier": "Request full dossier",
+    "bookViewing": "Book a viewing",
+    "responseTime": "Typical response: 4h · your details stay private",
     "overview": "Overview",
-    "analytics": "Analytics",
-    "pricePerSqm": "Price per m²",
-    "marketPrice": "Market Price",
-    "marketPricePerSqm": "Market Price per m²",
-    "discount": "Discount to Market",
-    "rentalYield": "Rental Yield",
-    "rentalIncome": "Annual Rental Income",
-    "commission": "Broker Commission",
+    "analytics": "Price vs market",
+    "asking": "Asking",
+    "marketLabel": "Market",
+    "marketPerSqm": "Market / m²",
+    "analystNote": "Analyst note",
+    "analystName": "Kanya P., lead analyst",
+    "analystReviewed": "Reviewed",
+    "similar": "Similar listings",
+    "seeAll": "See all →",
+    "listingInfo": "Listing info",
+    "listingId": "Listing ID",
+    "listed": "Listed",
+    "agentTitle": "Your agent · Bang Tao desk",
+    "agentStatus": "● Online · replies in ~4h",
     "area": "Area",
     "bedrooms": "Bedrooms",
-    "floor": "Floor",
-    "yearBuilt": "Year Built",
+    "bathrooms": "Bathrooms",
+    "completion": "Completion",
+    "tenure": "Tenure",
     "condition": "Condition",
-    "dealType": "Deal Type",
-    "furnished": "Furnished",
+    "furnishing": "Furnishing",
     "seller": "Seller",
-    "analystComment": "Analyst Comment",
-    "rating": "Attractiveness Rating",
-    "inquiryTitle": "Interested in this property?",
-    "inquirySubtitle": "Leave your details and we'll get back to you within 24 hours."
+    "rentalYield": "Rental yield",
+    "rentalIncome": "Annual rental income",
+    "pricePerSqm": "Price per m²"
   },
   "inquiry": {
-    "name": "Your Name",
+    "name": "Your name",
     "email": "Email",
     "phone": "Phone",
     "message": "Message (optional)",
-    "broker": "I'm a broker",
-    "company": "Company",
-    "submit": "Send Inquiry",
-    "success": "Thank you! We'll contact you shortly.",
-    "namePlaceholder": "John Smith",
-    "emailPlaceholder": "john@example.com",
-    "phonePlaceholder": "+66 XX XXX XXXX",
-    "messagePlaceholder": "I'm interested in this property..."
+    "broker": "I'm a broker / agent",
+    "company": "Agency",
+    "submit": "Send inquiry",
+    "success": "Thank you! We'll be in touch shortly.",
+    "namePlaceholder": "Full name",
+    "emailPlaceholder": "Email",
+    "phonePlaceholder": "Phone (with country code)",
+    "messagePlaceholder": "I'd like to visit this unit week of…",
+    "confidential": "By sending you agree to our confidentiality terms."
   },
   "about": {
-    "title": "About Us",
-    "description": "We specialize in off-market and distress real estate deals in Phuket.",
-    "support": {
-      "title": "Full Broker Support",
-      "items": [
-        { "title": "Expert Analytics", "desc": "Detailed analysis for every property: competitive pricing, market benchmarks, rental yield — all backed by real data." },
-        { "title": "Viewing Organization", "desc": "We book and conduct viewings, coordinate with owners, and answer all client questions." },
-        { "title": "Local Presence", "desc": "Our team is on the ground in Phuket, Samui, and Pattaya — real local expertise." },
-        { "title": "Concierge Service", "desc": "Airport pickup, hotel booking, property tours — the client just needs to choose." },
-        { "title": "Turnkey Deals", "desc": "Full support through closing: lawyers, paperwork, payments, registration — all under control." }
-      ]
-    }
+    "kicker": "About offmarket.phuket",
+    "title": "A private classified for the deals you won't find anywhere else.",
+    "lead": "We surface what developers and brokers don't advertise: owner-released contracts, distressed resales, and scarce units in sold-out buildings — reviewed by analysts and shared with credentialed buyers.",
+    "supportTitle": "Full broker support",
+    "supportItems": [
+      { "title": "Expert analytics", "desc": "Detailed analysis for every property: competitive pricing, market benchmarks, rental yield — backed by real data." },
+      { "title": "Viewing organization", "desc": "We book and conduct viewings, coordinate with owners, and answer all client questions." },
+      { "title": "Local presence", "desc": "Our team is on the ground in Phuket, Samui, and Pattaya — real local expertise." },
+      { "title": "Concierge service", "desc": "Airport pickup, hotel booking, property tours — the client just needs to choose." },
+      { "title": "Turnkey deals", "desc": "Full support through closing: lawyers, paperwork, payments, registration — all under control." }
+    ],
+    "contactTitle": "Talk to us",
+    "contactSub": "Two-minute form. We respond within four hours."
   },
   "footer": {
-    "rights": "All rights reserved.",
-    "tagline": "Exclusive off-market properties in Phuket"
+    "tagline": "A private classified for distressed and assignment properties across Phuket. Reviewed by analysts, circulated to credentialed clients.",
+    "rights": "all listings verified",
+    "col1": {
+      "title": "Properties",
+      "allListings": "All listings",
+      "bangTao": "Bang Tao",
+      "kamala": "Kamala",
+      "ready": "Ready",
+      "uc": "Under construction"
+    },
+    "col2": {
+      "title": "For you",
+      "requestAccess": "Request access",
+      "savedSearches": "Saved searches",
+      "alerts": "Alerts"
+    },
+    "col3": {
+      "title": "Company",
+      "about": "About",
+      "brokers": "Brokers",
+      "terms": "Terms",
+      "contact": "Contact"
+    }
   }
 }

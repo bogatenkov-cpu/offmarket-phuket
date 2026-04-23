@@ -12,7 +12,7 @@ interface FiltersProps {
   dict: Record<string, any>;
 }
 
-type SortKey = "price_asc" | "price_desc" | "discount" | "rating";
+type SortKey = "discount" | "price_asc" | "price_desc" | "area_desc" | "yield_desc" | "rating";
 
 export default function PropertyFilters({ properties, districts, locale, dict }: FiltersProps) {
   const t = dict.catalog.filters;
@@ -21,7 +21,7 @@ export default function PropertyFilters({ properties, districts, locale, dict }:
   const [propertyType, setPropertyType] = useState("");
   const [bedrooms, setBedrooms] = useState("");
   const [readyOnly, setReadyOnly] = useState<string>("");
-  const [sort, setSort] = useState<SortKey>("rating");
+  const [sort, setSort] = useState<SortKey>("discount");
 
   const filtered = useMemo(() => {
     let result = [...properties];
@@ -45,11 +45,18 @@ export default function PropertyFilters({ properties, districts, locale, dict }:
       case "price_desc":
         result.sort((a, b) => b.sale_price_usd - a.sale_price_usd);
         break;
-      case "discount":
-        result.sort((a, b) => b.discount_pct - a.discount_pct);
+      case "area_desc":
+        result.sort((a, b) => b.area_sqm - a.area_sqm);
+        break;
+      case "yield_desc":
+        result.sort((a, b) => b.rental_yield_pct - a.rental_yield_pct);
         break;
       case "rating":
         result.sort((a, b) => b.rating - a.rating || b.discount_pct - a.discount_pct);
+        break;
+      case "discount":
+      default:
+        result.sort((a, b) => b.discount_pct - a.discount_pct);
         break;
     }
 
@@ -58,97 +65,103 @@ export default function PropertyFilters({ properties, districts, locale, dict }:
 
   const hasFilters = district || propertyType || bedrooms || readyOnly;
 
+  const resetAll = () => {
+    setDistrict("");
+    setPropertyType("");
+    setBedrooms("");
+    setReadyOnly("");
+  };
+
+  const selectClass =
+    "px-3 py-2 bg-white border border-rule rounded-md text-[13px] text-ink hover:border-ink-soft cursor-pointer outline-none focus:ring-1 focus:ring-navy/30 transition";
+
   return (
     <div>
-      {/* Filters */}
-      <div className="bg-white border border-gray-100 rounded-2xl p-4 sm:p-6 mb-8 shadow-sm">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-          <select
-            value={district}
-            onChange={(e) => setDistrict(e.target.value)}
-            className="px-3 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-emerald-500 outline-none bg-white"
-          >
-            <option value="">{t.location}</option>
-            {districts.map((d) => (
-              <option key={d.value} value={d.value}>{d.label}</option>
-            ))}
-          </select>
+      {/* Filter chip row */}
+      <div className="flex flex-wrap gap-2 items-center">
+        <div className="text-[13px] text-ink-mute mr-1">{t.filterLabel}</div>
 
-          <select
-            value={propertyType}
-            onChange={(e) => setPropertyType(e.target.value)}
-            className="px-3 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-emerald-500 outline-none bg-white"
-          >
-            <option value="">{t.type}</option>
-            <option value="apartment">{t.apartment}</option>
-            <option value="villa">{t.villa}</option>
-          </select>
+        <select value={district} onChange={(e) => setDistrict(e.target.value)} className={selectClass}>
+          <option value="">{t.allLocations}</option>
+          {districts.map((d) => (
+            <option key={d.value} value={d.value}>
+              {d.label}
+            </option>
+          ))}
+        </select>
 
-          <select
-            value={bedrooms}
-            onChange={(e) => setBedrooms(e.target.value)}
-            className="px-3 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-emerald-500 outline-none bg-white"
-          >
-            <option value="">{t.bedrooms}</option>
-            <option value="0">{t.studio}</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="4">4+</option>
-          </select>
+        <select value={propertyType} onChange={(e) => setPropertyType(e.target.value)} className={selectClass}>
+          <option value="">{t.anyType}</option>
+          <option value="apartment">{t.apartment}</option>
+          <option value="villa">{t.villa}</option>
+        </select>
 
-          <select
-            value={readyOnly}
-            onChange={(e) => setReadyOnly(e.target.value)}
-            className="px-3 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-emerald-500 outline-none bg-white"
-          >
-            <option value="">{t.status}</option>
-            <option value="ready">{t.ready}</option>
-            <option value="construction">{t.construction}</option>
-          </select>
+        <select value={bedrooms} onChange={(e) => setBedrooms(e.target.value)} className={selectClass}>
+          <option value="">{t.anyRooms}</option>
+          <option value="0">{t.studio}</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="4">4+</option>
+        </select>
 
-          <select
-            value={sort}
-            onChange={(e) => setSort(e.target.value as SortKey)}
-            className="px-3 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-emerald-500 outline-none bg-white"
-          >
-            <option value="rating">{t.rating} ↓</option>
-            <option value="discount">{locale === "en" ? "Discount" : "Дисконт"} ↓</option>
-            <option value="price_asc">{locale === "en" ? "Price" : "Цена"} ↑</option>
-            <option value="price_desc">{locale === "en" ? "Price" : "Цена"} ↓</option>
-          </select>
-        </div>
+        <select value={readyOnly} onChange={(e) => setReadyOnly(e.target.value)} className={selectClass}>
+          <option value="">{t.anyStage}</option>
+          <option value="ready">{t.ready}</option>
+          <option value="construction">{t.construction}</option>
+        </select>
+
+        <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)} className={selectClass}>
+          <option value="discount">{t.sortDiscount}</option>
+          <option value="price_asc">{t.sortPriceAsc}</option>
+          <option value="price_desc">{t.sortPriceDesc}</option>
+          <option value="area_desc">{t.sortAreaDesc}</option>
+          <option value="yield_desc">{t.sortYieldDesc}</option>
+          <option value="rating">{t.sortRating}</option>
+        </select>
 
         {hasFilters && (
           <button
-            onClick={() => {
-              setDistrict("");
-              setPropertyType("");
-              setBedrooms("");
-              setReadyOnly("");
-            }}
-            className="mt-3 text-sm text-emerald-600 hover:text-emerald-700 font-medium"
+            onClick={resetAll}
+            className="text-[12px] text-ink-mute hover:text-ink ml-1 underline-offset-2 hover:underline"
           >
             {t.reset}
           </button>
         )}
       </div>
 
-      {/* Results count */}
-      <p className="text-sm text-gray-500 mb-6">
-        {filtered.length} {locale === "en" ? "properties" : "объектов"}
-      </p>
+      {/* Result bar */}
+      <div className="flex items-baseline justify-between mt-6 mb-5">
+        <div>
+          <h2 className="sr-only">{dict.catalog.title}</h2>
+          <div className="text-[14px] text-ink-mute">
+            {t.showing}{" "}
+            <strong className="text-ink">
+              {filtered.length} {locale === "en" ? "of" : "из"} {properties.length}
+            </strong>{" "}
+            {t.listings}
+          </div>
+        </div>
+      </div>
 
       {/* Grid */}
       {filtered.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {filtered.map((property) => (
-            <PropertyCard key={property.id} property={property} locale={locale} dict={dict} />
+            <PropertyCard key={property.id} property={property} locale={locale} dict={dict} compact />
           ))}
         </div>
       ) : (
-        <div className="text-center py-16 text-gray-400">
+        <div className="text-center py-20 text-ink-mute">
           <div className="text-5xl mb-4">🏠</div>
           <p>{t.noResults}</p>
+          {hasFilters && (
+            <button
+              onClick={resetAll}
+              className="mt-4 text-sm text-navy underline underline-offset-2"
+            >
+              {t.reset}
+            </button>
+          )}
         </div>
       )}
     </div>
