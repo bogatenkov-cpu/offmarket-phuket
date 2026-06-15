@@ -7,14 +7,44 @@ interface InquiryFormProps {
   propertyName?: string;
 }
 
-export default function InquiryForm({ dict }: InquiryFormProps) {
+export default function InquiryForm({ dict, propertyName }: InquiryFormProps) {
   const t = dict.inquiry;
+  const isRu = /[а-яА-Я]/.test(t.submit || "");
   const [submitted, setSubmitted] = useState(false);
   const [isBroker, setIsBroker] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setError(false);
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch("/api/inquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          phone: data.get("phone"),
+          message: data.get("message"),
+          company: data.get("company"),
+          isBroker,
+          property: propertyName,
+          lang: isRu ? "ru" : "en",
+        }),
+      });
+      if (!res.ok) throw new Error("Request failed");
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -31,10 +61,10 @@ export default function InquiryForm({ dict }: InquiryFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-2.5">
-      <input type="text" required placeholder={t.namePlaceholder} className={inputClass} />
-      <input type="email" required placeholder={t.emailPlaceholder} className={inputClass} />
-      <input type="tel" placeholder={t.phonePlaceholder} className={inputClass} />
-      <textarea rows={3} placeholder={t.messagePlaceholder} className={`${inputClass} resize-none`} />
+      <input type="text" name="name" required placeholder={t.namePlaceholder} className={inputClass} />
+      <input type="email" name="email" required placeholder={t.emailPlaceholder} className={inputClass} />
+      <input type="tel" name="phone" placeholder={t.phonePlaceholder} className={inputClass} />
+      <textarea name="message" rows={3} placeholder={t.messagePlaceholder} className={`${inputClass} resize-none`} />
 
       <label className="flex items-center gap-2 text-[13px] text-ink-soft cursor-pointer pt-1">
         <input
@@ -47,14 +77,21 @@ export default function InquiryForm({ dict }: InquiryFormProps) {
       </label>
 
       {isBroker && (
-        <input type="text" placeholder={t.company} className={inputClass} />
+        <input type="text" name="company" placeholder={t.company} className={inputClass} />
+      )}
+
+      {error && (
+        <p className="text-[13px] text-coral text-center">
+          {isRu ? "Что-то пошло не так. Попробуйте ещё раз." : "Something went wrong. Please try again."}
+        </p>
       )}
 
       <button
         type="submit"
-        className="w-full bg-coral hover:bg-coral/90 text-white font-semibold py-3 px-4 rounded-md text-[15px] transition mt-2"
+        disabled={loading}
+        className="w-full bg-coral hover:bg-coral/90 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3 px-4 rounded-md text-[15px] transition mt-2"
       >
-        {t.submit}
+        {loading ? (isRu ? "Отправка…" : "Sending…") : t.submit}
       </button>
       <div className="text-[11px] text-ink-mute text-center pt-1">{t.confidential}</div>
     </form>
