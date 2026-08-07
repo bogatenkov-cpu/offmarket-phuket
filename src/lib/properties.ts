@@ -65,7 +65,8 @@ export function getDistrictSummary(locale: "en" | "ru" = "en", limit: number = 4
   }
   return Array.from(grouped.entries())
     .map(([name, items]) => {
-      const sample = items.find((p) => p.photos && p.photos.length > 0) || items[0];
+      const sample = items.find((p) => p.slug === "the-title-modeva" && p.photos && p.photos.length > 0)
+        || items.find((p) => p.photos && p.photos.length > 0) || items[0];
       const minPrice = Math.min(...items.map((p) => p.sale_price_usd));
       return {
         name,

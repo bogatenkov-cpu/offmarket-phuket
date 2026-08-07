@@ -15,7 +15,7 @@
     "title": "Phuket properties",
     "titleAccent": "off",
     "titleTail": "the open market",
-    "subtitle": "Owner assignments and distressed resales, priced below the developer. Every listing reviewed by our analyst. Shown to you after a two-minute access request.",
+    "subtitle": "Owner assignments and distressed resales, priced below the developer. Every listing reviewed by our analyst.",
     "searchTitle": "Find a property",
     "searchAllPhuket": "All Phuket",
     "searchAnyType": "Any property",
@@ -54,7 +54,7 @@
   },
   "featured": {
     "kicker": "Today's pick",
-    "title": "Biggest markdowns this week",
+    "title": "Top projects this week",
     "seeAll": "See all {n} listings →"
   },
   "districts": {
@@ -67,7 +67,7 @@
     "kicker": "Request access",
     "title": "Unlock the full register in two",
     "titleAccent": "minutes",
-    "subtitle": "21 verified listings, full analyst reports, benchmark pricing and direct contact with our local agent. No mailing list, no newsletter, no public catalog.",
+    "subtitle": "21 verified listings, full analyst reports, benchmark pricing and direct contact with our local agent.",
     "primary": "Request access →",
     "secondary": "I'm a broker"
   },
@@ -93,7 +93,7 @@
       "sortRating": "Top rated",
       "reset": "Clear all",
       "showing": "Showing",
-      "listings": "off-market listings",
+      "listings": "listings",
       "noResults": "No properties match your filters"
     },
     "card": {
@@ -113,7 +113,7 @@
     "perSqm": "per m²",
     "marketEstimate": "Market estimate",
     "youSave": "You save",
-    "requestDossier": "Request full dossier",
+    "requestDossier": "Request details",
     "bookViewing": "Book a viewing",
     "responseTime": "Typical response: 4h · your details stay private",
     "overview": "Overview",
@@ -136,7 +136,7 @@
     "bathrooms": "Bathrooms",
     "completion": "Completion",
     "tenure": "Tenure",
-    "condition": "Condition",
+    "condition": "Finish",
     "furnishing": "Furnishing",
     "seller": "Seller",
     "rentalYield": "Rental yield",

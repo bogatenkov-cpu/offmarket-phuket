@@ -11,7 +11,7 @@ export default function Footer({ locale, dict }: FooterProps) {
   return (
     <footer className="mt-20 border-t border-rule bg-surface">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-10">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <div className="font-bold text-[17px] tracking-tight">
               offmarket<span className="text-coral">.</span>phuket
@@ -21,59 +21,9 @@ export default function Footer({ locale, dict }: FooterProps) {
             </p>
           </div>
 
-          <div>
-            <div className="text-xs uppercase tracking-[0.1em] text-ink-mute mb-3.5">
-              {t.col1.title}
-            </div>
-            <Link href={`/${locale}/properties`} className="block text-[13px] text-ink-soft hover:text-ink mb-2 transition">
-              {t.col1.allListings}
-            </Link>
-            <Link href={`/${locale}/properties`} className="block text-[13px] text-ink-soft hover:text-ink mb-2 transition">
-              {t.col1.bangTao}
-            </Link>
-            <Link href={`/${locale}/properties`} className="block text-[13px] text-ink-soft hover:text-ink mb-2 transition">
-              {t.col1.kamala}
-            </Link>
-            <Link href={`/${locale}/properties`} className="block text-[13px] text-ink-soft hover:text-ink mb-2 transition">
-              {t.col1.ready}
-            </Link>
-            <Link href={`/${locale}/properties`} className="block text-[13px] text-ink-soft hover:text-ink mb-2 transition">
-              {t.col1.uc}
-            </Link>
-          </div>
-
-          <div>
-            <div className="text-xs uppercase tracking-[0.1em] text-ink-mute mb-3.5">
-              {t.col2.title}
-            </div>
-            <Link href={`/${locale}/properties`} className="block text-[13px] text-ink-soft hover:text-ink mb-2 transition">
-              {t.col2.requestAccess}
-            </Link>
-            <Link href={`/${locale}/properties`} className="block text-[13px] text-ink-soft hover:text-ink mb-2 transition">
-              {t.col2.savedSearches}
-            </Link>
-            <Link href={`/${locale}/properties`} className="block text-[13px] text-ink-soft hover:text-ink mb-2 transition">
-              {t.col2.alerts}
-            </Link>
-          </div>
-
-          <div>
-            <div className="text-xs uppercase tracking-[0.1em] text-ink-mute mb-3.5">
-              {t.col3.title}
-            </div>
-            <Link href={`/${locale}/about`} className="block text-[13px] text-ink-soft hover:text-ink mb-2 transition">
-              {t.col3.about}
-            </Link>
-            <Link href={`/${locale}/about`} className="block text-[13px] text-ink-soft hover:text-ink mb-2 transition">
-              {t.col3.brokers}
-            </Link>
-            <Link href={`/${locale}/about`} className="block text-[13px] text-ink-soft hover:text-ink mb-2 transition">
-              {t.col3.terms}
-            </Link>
-            <Link href={`/${locale}/about`} className="block text-[13px] text-ink-soft hover:text-ink mb-2 transition">
-              {t.col3.contact}
-            </Link>
-          </div>
+          <Link href={`/${locale}/about`} className="inline-flex items-center justify-center bg-navy hover:bg-navy-2 text-white font-medium px-5 py-2.5 rounded-md text-[14px] transition">
+            {t.col3.about}
+          </Link>
         </div>
 
         <div className="mt-8 pt-5 border-t border-rule flex flex-col md:flex-row justify-between text-xs text-ink-mute gap-2">

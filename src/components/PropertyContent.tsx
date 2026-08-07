@@ -165,26 +165,6 @@ export default function PropertyContent({ locale, dict, property, similar }: Pro
               </div>
             </div>
 
-            {/* Analyst note */}
-            {analystComment && (
-              <div className="mb-10">
-                <h2 className="text-xl lg:text-[22px] font-bold tracking-[-0.02em] mb-3.5">{t.analystNote}</h2>
-                <div className="bg-surface border border-rule border-l-4 border-l-navy rounded-xl p-5 lg:p-6">
-                  <div className="flex items-center gap-2.5 mb-3.5">
-                    <div className="w-9 h-9 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">
-                      KP
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold">{t.analystName}</div>
-                      <div className="text-xs text-ink-mute">{t.analystReviewed} · {new Date().toLocaleDateString(isRu ? "ru-RU" : "en-US")}</div>
-                    </div>
-                  </div>
-                  <p className="font-display text-[20px] lg:text-[22px] leading-[1.45] text-ink m-0">
-                    "{analystComment}"
-                  </p>
-                </div>
-              </div>
-            )}
 
             {/* Price benchmark */}
             <div className="mb-10">
