@@ -81,7 +81,7 @@ export default function InquiryForm({ dict, propertyName }: InquiryFormProps) {
       )}
 
       {error && (
-        <p className="text-[13px] text-coral text-center">
+        <p className="text-[13px] text-red-600 text-center">
           {isRu ? "Что-то пошло не так. Попробуйте ещё раз." : "Something went wrong. Please try again."}
         </p>
       )}
@@ -89,7 +89,7 @@ export default function InquiryForm({ dict, propertyName }: InquiryFormProps) {
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-coral hover:bg-coral/90 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3 px-4 rounded-md text-[15px] transition mt-2"
+        className="w-full bg-navy hover:bg-navy-2 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3 px-4 rounded-md text-[15px] transition mt-2"
       >
         {loading ? (isRu ? "Отправка…" : "Sending…") : t.submit}
       </button>

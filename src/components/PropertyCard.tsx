@@ -59,7 +59,7 @@ export default function PropertyCard({ property, locale, dict, compact = false }
         </div>
 
         {p.rating >= 5 && (
-          <span className="absolute top-3 right-3 bg-coral text-white border border-coral text-[11px] font-medium px-2.5 py-1 rounded-full">
+          <span className="absolute top-3 right-3 bg-navy text-white border border-navy text-[11px] font-medium px-2.5 py-1 rounded-full">
             ★ {t.featured}
           </span>
         )}
