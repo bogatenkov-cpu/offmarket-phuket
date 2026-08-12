@@ -83,7 +83,7 @@ export default function PropertyContent({ locale, dict, property, similar }: Pro
             </div>
 
             {/* Fact strip */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 mt-6 bg-surface border border-rule rounded-xl overflow-hidden">
+            <div className="grid grid-cols-2 sm:grid-cols-4 mt-6 bg-[#23322E]/90 text-white rounded-xl overflow-hidden">
               {[
                 [t.area, `${p.area_sqm} m²`],
                 [t.bedrooms, p.bedrooms === 0 ? dict.catalog.filters.studio : `${p.bedrooms}`],
@@ -92,10 +92,10 @@ export default function PropertyContent({ locale, dict, property, similar }: Pro
               ].map(([k, v], i) => (
                 <div
                   key={i}
-                  className={`p-4 lg:p-5 ${i < 3 ? "sm:border-r border-rule" : ""} ${i < 2 ? "border-b sm:border-b-0 border-rule" : ""}`}
+                  className={`p-4 lg:p-5 ${i < 3 ? "sm:border-r border-white/10" : ""} ${i < 2 ? "border-b sm:border-b-0 border-white/10" : ""}`}
                 >
-                  <div className="text-[11px] text-ink-mute uppercase tracking-[0.08em]">{k}</div>
-                  <div className="text-lg lg:text-[20px] font-semibold mt-1">{v}</div>
+                  <div className="text-[11px] text-white/50 uppercase tracking-[0.08em]">{k}</div>
+                  <div className="text-lg lg:text-[20px] font-medium mt-1">{v}</div>
                 </div>
               ))}
             </div>
@@ -112,7 +112,7 @@ export default function PropertyContent({ locale, dict, property, similar }: Pro
             </div>
 
             {p.discount_pct > 0 && (
-              <div className="mt-4 px-4 py-3 bg-[#fef1ec] rounded-lg border border-coral-border">
+              <div className="mt-4 px-4 py-3 bg-coral-soft rounded-lg border border-coral-border">
                 <div className="flex justify-between text-[13px]">
                   <span className="text-ink-soft">{t.marketEstimate}</span>
                   <span className="font-semibold line-through text-ink-mute">{formatPriceExact(p.market_price_usd)}</span>
@@ -192,7 +192,7 @@ export default function PropertyContent({ locale, dict, property, similar }: Pro
                   <div className="flex items-center gap-3 text-[13px]">
                     <span className="w-16 text-ink-mute">{t.asking}</span>
                     <div className="flex-1 h-3 bg-white border border-rule rounded-full overflow-hidden">
-                      <div className="h-full bg-navy rounded-full" style={{ width: `${askPct}%` }} />
+                      <div className="h-full bg-[#A4FF55] rounded-full" style={{ width: `${askPct}%` }} />
                     </div>
                     <span className="w-20 text-right font-semibold">{formatPriceExact(p.sale_price_usd)}</span>
                   </div>

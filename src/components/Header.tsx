@@ -18,12 +18,12 @@ export default function Header({ locale, dict }: HeaderProps) {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-rule">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3.5">
-          <Link href={`/${locale}`} className="flex items-center gap-2.5 text-ink no-underline">
-            <div className="w-[30px] h-[30px] bg-navy text-white flex items-center justify-center font-display text-lg leading-none">
-              o
-            </div>
-            <div className="font-bold text-[17px] tracking-tight">
-              offmarket<span className="text-coral">.</span>phuket
+          <Link href={`/${locale}`} className="flex items-center gap-2 text-ink no-underline">
+            <div>
+              <div className="font-bold text-[17px] tracking-tight leading-none">
+                offmarket<span className="text-[#A4FF55]">.</span>phuket
+              </div>
+              <div className="text-[9px] text-ink-mute tracking-[0.04em] mt-0.5">by Tranio</div>
             </div>
           </Link>
 
